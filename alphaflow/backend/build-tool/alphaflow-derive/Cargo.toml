@@ -1,0 +1,19 @@
+[package]
+name = "alphaflow-derive"
+version = "0.1.0"
+edition = "2018"
+
+[lib]
+proc-macro = true
+name = "alphaflow_derive"
+
+[dependencies]
+syn = { version = "1.0.109", features = ["extra-traits", "visit"] }
+quote = "1.0"
+proc-macro2 = "1.0"
+alphaflow-ast = { path = "../alphaflow-ast" }
+lazy_static = "1.4.0"
+dashmap = "6.0.1"
+alphaflow-codegen = { path = "../alphaflow-codegen", version = "0.1.0" }
+serde_json = "1.0.109"
+walkdir = "2.3.2"

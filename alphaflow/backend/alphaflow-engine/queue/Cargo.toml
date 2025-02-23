@@ -1,0 +1,20 @@
+[package]
+name = "queue"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# 如果 atomic_refcell 不在 workspace dependencies，则直接指定版本
+atomic_refcell = "0.1.7"
+serde_json = "1.0.100"
+
+# 以下依赖若在顶层 workspace 里已声明，可以改为 { workspace = true }
+anyhow = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true, features = ["sync", "time"] }
+tracing = { workspace = true }
+
+# store 与 handlers 同属于 workspace 下的包
+store = { path = "../store"}
+handlers = { path = "../handlers"}
+alphaflow-nodes = { path = "../../alphaflow-nodes"}

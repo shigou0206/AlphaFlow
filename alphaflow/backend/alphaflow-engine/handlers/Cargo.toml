@@ -1,0 +1,14 @@
+[package]
+name = "handlers"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# 如果顶层 workspace 已声明 [workspace.dependencies] anyhow = "1" 等，你可用 workspace = true 引入
+anyhow = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "sync", "time"] }
+tracing = { workspace = true }
+
+# 如果 store 包的 [package] name = "store" 且它在 ../store
+store = { path = "../store" }

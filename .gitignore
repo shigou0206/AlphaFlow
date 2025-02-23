@@ -1,0 +1,46 @@
+# ------------------------
+# 通用忽略规则
+# ------------------------
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Flutter 相关（适用于任意子目录下的 Flutter 工程）
+
+# Flutter 构建输出（不管 build 目录在哪个子目录中）
+**/build/
+# iOS 构建产物
+**/ios/Pods/
+**/ios/Runner.xcworkspace/
+**/ios/Flutter/Flutter.framework/
+**/ios/Flutter/Flutter.podspec
+# Android 构建产物
+**/android/.gradle/
+**/android/app/build/
+**/android/build/
+**/android/local.properties
+# Flutter 和 Dart 依赖及缓存
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/pubspec.lock
+**/.pub-cache/
+**/.pub/
+**/.flutter-versions
+
+# 其它平台或工具生成的文件
+**/.DS_Store
+**/*.log
+
+# ------------------------
+# Rust 相关（适用于任意子目录下的 Rust 工程）
+# ------------------------
+
+# 编译生成的 target 目录（任意位置的 target 目录）
+**/target/
+# 如果是库项目，建议忽略 Cargo.lock；若是可执行项目，可以保留 Cargo.lock
+**/Cargo.lock
+# 临时备份文件
+**/*.rs.bk
+**/*.env

@@ -1,0 +1,16 @@
+[package]
+name = "orch"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# 如果你只想快速引用 queue、store、handlers，用相对路径即可
+queue = { path = "../queue" }
+store = { path = "../store" }
+handlers = { path = "../handlers" }
+
+# 可选，如果需要 workspace 继承
+anyhow = { workspace = true }
+async-trait = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "sync", "time"] }
+tracing = { workspace = true }

@@ -1,0 +1,21 @@
+PODS:
+  - AlphaflowFFI (0.0.1)
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - AlphaflowFFI (from `.`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  AlphaflowFFI:
+    :path: "."
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  AlphaflowFFI: b032f7db86f2a6648ff5147f26f8db7fdb94bd70
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+
+PODFILE CHECKSUM: d56aaca2ffdfdbcb7cb9fbbf11074738459dc149
+
+COCOAPODS: 1.16.2

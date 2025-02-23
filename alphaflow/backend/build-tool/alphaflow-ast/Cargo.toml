@@ -1,0 +1,14 @@
+[package]
+name = "alphaflow-ast"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# If you only parse struct / enum, no need for full functionality:
+# syn = { version = "1.0", features = ["derive", "parsing"] }
+
+# If you need to parse the full AST (function bodies, expressions, etc.) and debug output/eq:
+syn = { version = "1.0", features = ["full", "extra-traits", "derive", "parsing"] }
+
+quote = "1.0"
+proc-macro2 = "1.0"

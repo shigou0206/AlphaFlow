@@ -1,0 +1,29 @@
+[workspace]
+members = [
+  "alphaflow-ffi",
+  "alphaflow-sqlite",
+  "alphaflow-nodes",
+  "build-tool/alphaflow-ast",
+  "build-tool/alphaflow-codegen",
+  "build-tool/alphaflow-derive",
+  "alphaflow-engine/orch",
+  "alphaflow-engine/queue",
+  "alphaflow-engine/store",
+  "alphaflow-engine/handlers",
+  "alphaflow-engine/engine",
+  "alphaflow-workflow",
+  "alphaflow-jmes"
+]
+
+resolver = "2"
+
+[workspace.dependencies]
+anyhow = "1"
+async-trait = "0.1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time"] }
+tracing = "0.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "1.0"
+reqwest = { version = "0.11", features = ["json"] }
+dotenv = "0.15"
