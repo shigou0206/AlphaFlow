@@ -85,6 +85,9 @@ mod tests {
                 "method": "GET"
             }),
             input_data: json!(null),
+            globals: json!(null),
+            env: json!(null),
+            pin_data: None,
         };
 
         let output = handler.execute(&ctx).await.expect("execution should succeed");
@@ -111,6 +114,9 @@ async fn test_http_handler_missing_url() {
             "method":"GET"
         }),
         input_data: json!(null),
+        globals: json!(null),
+        env: json!(null),
+        pin_data: None,
     };
 
     let result = handler.execute(&ctx).await;

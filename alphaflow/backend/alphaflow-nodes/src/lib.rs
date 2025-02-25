@@ -1,6 +1,8 @@
 mod registry;
 
 pub mod node_type;
+pub mod node;
+pub mod input_mapping;
 pub mod http;
 pub mod openai;
 

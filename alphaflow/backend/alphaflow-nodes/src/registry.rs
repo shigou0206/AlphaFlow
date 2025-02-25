@@ -77,6 +77,9 @@ mod tests {
         let result = node_impl.execute(&NodeExecutionContext {
             parameters: Value::Null,
             input_data: Value::Null,
+            globals: Value::Null,
+            env: Value::Null,
+            pin_data: None,
         }).await;
         assert!(result.is_ok());
         assert_eq!(

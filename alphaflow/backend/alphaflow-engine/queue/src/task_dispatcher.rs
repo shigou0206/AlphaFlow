@@ -131,6 +131,9 @@ impl TaskDispatcher {
             TaskContent::Text(s) => NodeExecutionContext {
                 parameters: serde_json::json!({ "text": s }),
                 input_data: serde_json::Value::Null,
+                globals: serde_json::Value::Null,
+                env: serde_json::Value::Null,
+                pin_data: None,
             },
             TaskContent::Blob(bytes) => {
                 // maybe parse as JSON or keep as raw?
@@ -138,6 +141,9 @@ impl TaskDispatcher {
                 NodeExecutionContext {
                     parameters: serde_json::json!({ "blob_size": bytes.len() }),
                     input_data: serde_json::Value::Null,
+                    globals: serde_json::Value::Null,
+                    env: serde_json::Value::Null,
+                    pin_data: None,
                 }
             },
         }

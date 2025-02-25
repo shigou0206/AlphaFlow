@@ -3,3 +3,7 @@ pub mod transformation;
 pub mod workflow;
 pub mod json_expression;
 pub mod jmse_expression;
+pub mod directed_graph;
+pub mod jmes_runtime;
+pub mod waiting_queue;
+pub mod executor;

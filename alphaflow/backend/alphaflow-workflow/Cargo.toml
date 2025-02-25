@@ -21,4 +21,6 @@ jaq-core = "1.0.3"
 jaq-interpret = "1.0.3"
 log = "0.4"
 env_logger = "0.9"
-
+petgraph = "0.6"
+itertools = "0.10"
+thiserror = "1.0"

@@ -131,6 +131,9 @@ mod tests {
                 "system_content": "You are a helpful assistant."
             }),
             input_data: json!(null),
+            globals: json!(null),
+            env: json!(null),
+            pin_data: None,
         };
 
         let result = handler.execute(&ctx).await;
@@ -158,6 +161,9 @@ mod tests {
                 "base_url": "https://api.openai.com/v1"
             }),
             input_data: json!(null),
+            globals: json!(null),
+            env: json!(null),
+            pin_data: None,
         };
 
         let result = handler.execute(&ctx).await;
