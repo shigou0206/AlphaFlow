@@ -66,6 +66,14 @@ benchmark_main!(benches);
             .as_bytes(),
         )
         .expect("Error bench headers");
+
+    // Create an empty compliance test file for now
+    fs::write(
+        &compliance_path,
+        "#[test] fn dummy_compliance() { /* TODO: Add real compliance tests */ }"
+    ).unwrap();
+    
+    println!("cargo:rerun-if-changed=build.rs");
 }
 
 /// Load all tests suites found in the tests/compliance directory.

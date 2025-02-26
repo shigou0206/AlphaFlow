@@ -4,6 +4,8 @@ pub use crate::errors::{ErrorReason, JmespathError, RuntimeError};
 pub use crate::parser::{parse, ParseResult};
 pub use crate::runtime::Runtime;
 pub use crate::variable::Variable;
+pub use crate::expression::apply_template;
+pub use crate::jmes_runtime::compile_and_search;
 
 pub mod ast;
 pub mod functions;
@@ -22,6 +24,9 @@ mod lexer;
 mod parser;
 mod runtime;
 mod variable;
+mod expression;
+mod jmes_runtime;
+
 
 lazy_static! {
     pub static ref DEFAULT_RUNTIME: Runtime = {
