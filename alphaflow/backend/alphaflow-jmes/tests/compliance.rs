@@ -313,6 +313,7 @@ impl TestCase {
             expression: expression_str,
             assertion,
         })
+        
     }
 
     /// Perform the test case assertion against a given value.
